@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./Js_pr.css">
+</head>
+<body>
+    <div class="title">第一章</div>
+    <!--No.1-->
+    <div class="box">
+        <div class="title">1.</div>
+        <span>請輸入里程數(公里)：</span>
+        <input class="input" id="Input1"/>
+        <button class="button" id="Button1">計算</button>
+        <div class="print" id="Print1"></div>
+    </div>
+    
+    <!--No.2-->
+    <div class="box">
+        <div class="title">2.</div>
+        <span>請輸入身分證字號：</span>
+        <input type="text" class="input" id="Input2" maxlength="10"/>
+        <button class="button" id="Button2">檢驗</button>
+        <div class="print" id="Print2"></div>
+    </div>
+    
+    <!--No.3-->
+    <div class="box">
+        <div class="title">3.</div>
+        <span>印星星：</span>
+        <button class="button" id="Button3">印出</button>
+        <div class="print" id="Print3"></div>
+    </div>
+    <script src="./Js_pr.js"></script>
+
+    <!--No.4-->
+    <div class="box">
+        <div class="title">4.</div>
+        <span>以下功能：</span><br/>
+        <input type="text" class="input" id="Input4" value="聚焦我"/><br/>
+        <button class="button" id="Button4">時間</button><br/>
+        <select id="Select4">
+            <option value="A">選項A</option>
+            <option value="B">選項B</option>
+            <option value="C">選項C</option>
+        </select>
+    </div>
+
+    <div class="title">第二章<br/>
+    (陣列換元素皆用空白，二維換列皆用Enter)</div>
+    <!--No.21-->
+    <div class="box">
+        <div class="title">1.</div>
+        <span>請輸入陣列：</span>
+        <input type="text" class="input" id="Input21"/>
+        <button class="button" id="Button21">執行</button>
+        <div class="print" id="Print21"></div>
+        <span>查詢第幾個陣列陣列並執行(正序的)：</span>
+        <input type="text" class="input" id="Input213"/>
+        <button class="button" id="Button213">查詢</button>
+        <button class="button" id="Button215p">新增當前值</button>
+        <button class="button" id="Button216d">刪除該筆</button>
+        <button class="button" id="Button215d">刪除最後</button>
+        <div class="print" id="Print213"></div>
+        <div class="print" id="Print215"></div>
+    </div>
+
+    <!--No.22-->
+    <div class="box">
+        <div class="title">2.</div>
+        <span>請輸入摩斯密碼：</span><br/>
+        <textarea class="textarea22" style="resize:none;" id="Input22"></textarea><br/>
+        <button class="button" id="Button22">執行</button>
+        <div class="print" id="Print22"></div>
+    </div>
+    
+    <!--No.23-->
+
+    <div class="box">
+        <div class="title">3.</div>
+        <span>請輸入矩陣(每列長度並無限制)：</span><br/>
+        <textarea class="textarea2" style="resize:none;" id="Input23"></textarea><br/>
+        <button class="button" id="Button23">執行</button>
+        <div class="print" id="Print23"></div>
+    </div>
+    
+    <!--No.24-->
+
+    <div class="box">
+        <div class="title">4.</div>
+        <span>請輸入矩陣(每列長度請維持一致)：</span><br/>
+        <textarea class="textarea2" style="resize:none;" id="Input24"></textarea><br/>
+        <button class="button" id="Button24">執行</button>
+        <div class="print" id="Print24"></div>
+    </div>
+
+    <!--No.25-->
+
+    <div class="box">
+        <div class="title">5.</div>
+        <span>進制轉換器(輸入一種，轉換成其餘三種)：</span><br/>
+        <span>10進制：</span>
+        <input type="text" class="input" id="Input25_10"></input><br/>
+        <span>2進制：&ensp;</span>
+        <input type="text" class="input" id="Input25_2"></input><br/>
+        <span>8進制：&ensp;</span>
+        <input type="text" class="input" id="Input25_8"></input><br/>
+        <span>16進制：</span>
+        <input type="text" class="input" id="Input25_16"></input><br/>
+        <div class="title">6.</div>
+        <span>清除第5題的輸入框</span><br/>
+        <button class="button" id="Button25">清除</button>
+        <div class="print" id="Print25"></div>
+    </div>
+    
+    <!--No.27-->
+
+    <div class="box">
+        <div class="title">7.</div>
+        <span>執行並觀看Console出的Json物件</span>
+        <button class="button" id="Button27">執行</button>
+        <div class="print" id="Print27"></div>
+    </div>
+    
+    <!--No.28-->
+
+    <div class="box">
+        <div class="title">8.</div>
+        <span>留言板</span>
+        <input type="text" class="input" id="Input28_1" value="User Name"></input>
+        <input type="text" class="input" id="Input28_2" value="Password"></input>
+        <button class="button" id="Button28">送出</button>
+        <div class="print" id="Print28">
+            <table id="table28">
+                <thead>
+                    <tr>
+                        <td>
+                            Id
+                        </td>
+                        <td>
+                            User Name
+                        </td>
+                        <td>
+                            Password
+                        </td>
+                        <td>
+                            Action
+                        </td>
+                    </tr>
+                </thead>
+                <tbody id="tbody28">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--No.29-->
+
+    <div class="box">
+        <div class="title">9.</div>
+        <span>按下執行開始監聽按鍵</span>
+        <button class="button" id="Button29">執行</button>
+        <button class="button" id="Button29_E" style="background-color: red;display: none;">結束</button>
+        <div class="print" id="Print29"></div>
+    </div>
+
+    <!--No.210-->
+
+    <div class="box">
+        <div class="title">10.</div>
+        <span>按下執行開始監聽複合鍵</span>
+        <button class="button" id="Button210">執行</button>
+        <button class="button" id="Button210_E" style="background-color: red;display: none;">結束</button>
+        <div class="print" id="Print210"></div>
+    </div>
+
+    <div class="title">第三章.</div>
+
+    <!--No.31-->
+
+    <div class="box">
+        <div class="title">1.</div>
+        <div id="Print31">
+            <div id="Day31"></div>
+            <div id="Time31"></div>
+        </div>
+    </div>
+
+    <!--No.32-->
+
+    <div class="box">
+        <div class="title">2.</div>
+        <span>搜尋商品：</span>
+        <input type="text" class="input" id="Input32"></input>
+        <button class="button" id="Button32">搜尋</button>
+        <div id="Print32">
+        </div>
+    </div>
+    
+    <!--No.33
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <div class="box">
+        <div class="title">3.</div>
+        <button class="button" id="Button33">執行</button>
+        <div id="box33">
+            <div class="block33" id="block33_1">
+                <div class="text33_t" id="text33_1_t"></div>
+                <div class="text33" id="text33_1_c">LET'S</div>
+                <div class="text33_b" id="text33_1_b"></div>
+            </div>
+            <div class="block33" id="block33_2">
+                <div class="text33_t" id="text33_2_t"></div>
+                <div class="text33" id="text33_2_c">TAKE</div>
+                <div class="text33_b" id="text33_2_b"></div>
+            </div>
+            <div class="block33" id="block33_3">
+                <div class="text33_t" id="text33_3_t"></div>
+                <div class="text33" id="text33_3_c">IT</div>
+                <div class="text33_b" id="text33_3_b"></div>
+            </div>
+            <div class="block33" id="block33_4">
+                <div class="text33_t" id="text33_4_t"></div>
+                <div class="text33" id="text33_4_c">ALL</div>
+                <div class="text33_b" id="text33_4_b"></div>
+            </div>
+            <div class="block33" id="block33_5">
+                <div class="text33_t" id="text33_5_t"></div>
+                <div class="text33" id="text33_5_c">IN</div>
+                <div class="text33_b" id="text33_5_b"></div>
+            </div>
+        </div>
+        -->
+    </div>
+
+
+</body>
+</html>
