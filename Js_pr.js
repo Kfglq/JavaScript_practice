@@ -893,36 +893,169 @@ function Print32fn(arr){
 
 //No.33
 
-let block33_1 = document.getElementById('block33_1');
-let block33_2 = document.getElementById('block33_2');
-let block33_3 = document.getElementById('block33_3');
-let block33_4 = document.getElementById('block33_4');
-let block33_5 = document.getElementById('block33_5');
-block33_1.addEventListener('click',Action33fn);
-block33_2.addEventListener('click',Action33fn/*(2,'GIVE','RECEIVE')*/);
-block33_3.addEventListener('click',Action33fn/*(3,'EXPERIENCE','TODAY')*/);
-block33_4.addEventListener('click',Action33fn/*(4,'GIVE','YOU CAN')*/);
-block33_5.addEventListener('click',Action33fn/*(5,'LIFE','MOTION')*/);
+let Button33 = document.getElementById('Button33');
+let box33 = document.getElementById('box33');
+let str33 = ['HEY','GIVE','EXPERIENCE','GIVE','LIFE','DANCE','RECEIVE','TODAY','YOU CAN','MOTION'];
+let tf33 = [1,1,1,1,1];
+Button33.addEventListener('click',function(){
+    box33.style.display = 'flex';
+    document.addEventListener('click',function(e){
+        if(e.target.id.split('_')[0]=='block33' || e.target.id.split('_')[0]=='text33'){
+            eid33 = e.target.id.split('_')[1];
+            console.log(tf33[eid33-1]);
+            if(tf33[eid33-1]==1){
+                Action33fnO(eid33);
+            }
+            else if(tf33[eid33-1]==3.8){
+                Action33fnC(eid33);
+            }
+        }
+    },false);
+},false);
 
-function Action33fn(){
-    bn = 1
-    t= 'HEY';
-    b= 'DANCE';
+function Action33fnO(bn){
     let text_t = document.getElementById(`text33_${bn}_t`);
     let text_b = document.getElementById(`text33_${bn}_b`);
+    text_t.style.border = '1px red solid';
+    text_b.style.border = '1px red solid';
     text_t.setAttribute('class','text33_op');
     text_b.setAttribute('class','text33_op');
-    text_t.innerHTML = t;
-    text_b.innerHTML = b;
-    let button33 = document.getElementById(`block33_${bn}`);
-    button33.removeEventListener('click',Action33fn);
-    button33.addEventListener('click',function(){
-        text_t.setAttribute('class','text33_t');
-        text_b.setAttribute('class','text33_b');
-        button33.addEventListener('click',Action33fn);
-    },false);
+    text_t.innerHTML = str33[Number(bn)-1];
+    text_b.innerHTML = str33[Number(bn)+4];
+    tf33[bn-1] = 0.7;
+    let tf33m = 0;
+    for(i=0;i<5;i++){
+        tf33m += tf33[i];
+    }
+    for(i=0;i<5;i++){
+        let block33w = document.getElementById(`block33_${i+1}`);
+        block33w.style.transition = 'width 0.3s';
+        block33w.style.width = `${(tf33[i]/tf33m)*100}%`;
+        let text33 = document.getElementById(`text33_${bn}_c`);
+        text33.style.transition = 'font-size 0.3s';
+        text33.style.fontSize = '60px';
+    }
+    setTimeout(function(){
+        tf33[bn-1] = 3.8;
+        let tf33m = 0;
+        for(i=0;i<5;i++){
+            tf33m += tf33[i];
+        }
+        for(i=0;i<5;i++){
+            let block33w = document.getElementById(`block33_${i+1}`);
+            block33w.style.transition = 'width 0.5s';
+            block33w.style.width = `${(tf33[i]/tf33m)*100}%`;
+            let text33 = document.getElementById(`text33_${bn}_c`);
+            text33.style.transition = 'font-size 0.5s';
+            text33.style.fontSize = '120px';
+        }
+    }, 300);
+    
 }
 
+function Action33fnC(bn){
+    let text_t = document.getElementById(`text33_${bn}_t`);
+    let text_b = document.getElementById(`text33_${bn}_b`);
+    text_t.setAttribute('class','text33_t');
+    text_b.setAttribute('class','text33_b');
+    tf33[bn-1] = 4.1;
+    let tf33m = 0;
+    for(i=0;i<5;i++){
+        tf33m += tf33[i];
+    }
+    for(i=0;i<5;i++){
+        let block33w = document.getElementById(`block33_${i+1}`);
+        block33w.style.transition = 'width 0.3s';
+        block33w.style.width = `${(tf33[i]/tf33m)*100}%`;
+        let text33 = document.getElementById(`text33_${bn}_c`);
+        text33.style.transition = 'font-size 0.3s';
+        text33.style.fontSize = '140px';
+    }
+    setTimeout(function(){
+        tf33[bn-1] = 1;
+        let tf33m = 0;
+        for(i=0;i<5;i++){
+            tf33m += tf33[i];
+        }
+        for(i=0;i<5;i++){
+            let block33w = document.getElementById(`block33_${i+1}`);
+            block33w.style.transition = 'width 0.5s';
+            block33w.style.width = `${(tf33[i]/tf33m)*100}%`;
+            let text33 = document.getElementById(`text33_${bn}_c`);
+            text33.style.transition = 'font-size 0.5s';
+            text33.style.fontSize = '80px';
+        }
+    }, 300);
+    setTimeout(function(){
+        text_t.innerHTML = '';
+        text_b.innerHTML = '';
+        text_t.style.border = 'none';
+        text_b.style.border = 'none';
+    }, 1000);
+}
+
+//No.34
+//No.35
+
+let Button34 = document.getElementById('Button34');
+let box34 = document.getElementById('box34');
+let header35 = document.getElementById('header35');
+Button34.addEventListener('click',function(){
+    box34.style.display = 'flex';
+    const tempheader35 = header35.offsetTop;
+    window.addEventListener('scroll',function(){
+        let scrollY = this.scrollY;
+        let img1 = document.getElementById('img1');
+        if(scrollY>=3900){
+            img1.setAttribute('class','imgl_p');
+        }
+        else{
+            img1.setAttribute('class','imgl');
+        }
+        let img2 = document.getElementById('img2');
+        if(scrollY>=4500){
+            img2.setAttribute('class','imgr_p');
+        }
+        else{
+            img2.setAttribute('class','imgr');
+        }
+        let img3 = document.getElementById('img3');
+        if(scrollY>=5800){
+            img3.setAttribute('class','imgl_p');
+        }
+        else{
+            img3.setAttribute('class','imgl');
+        }
+        let img4 = document.getElementById('img4');
+        if(scrollY>=5800){
+            img4.setAttribute('class','img4_p');
+        }
+        else{
+            img4.setAttribute('class','img4');
+        }
+        let img5 = document.getElementById('img5');
+        if(scrollY>=6900){
+            img5.setAttribute('class','imgr_p');
+        }
+        else{
+            img5.setAttribute('class','imgr');
+        }
+        if(scrollY>tempheader35){
+            let bar35 = this.document.getElementsByClassName('bar35')[0];
+            bar35.setAttribute('class','bar35n');
+            header35.classList.add('header35n');
+            let logo35 = this.document.getElementById('logo35');
+            logo35.style.display = 'flex';
+        }
+        else{
+            let bar35 = this.document.getElementsByClassName('bar35n')[0];
+            bar35.setAttribute('class','bar35');
+            header35.classList.remove('header35n');
+            let logo35 = this.document.getElementById('logo35');
+            logo35.style.display = 'none';
+        }
+    },false);
+},false);
 
 
 
